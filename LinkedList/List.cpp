@@ -135,3 +135,46 @@ ElementType List::getElement(const int& pos) const {
     return nodeActual->data;
 }
 
+void List::shuffle(const List& list) {
+    List shuffled;
+    Node* nodeActual = head;
+    Node* nodeSecond = list.head;
+    while (nodeActual != NULL || nodeSecond != NULL) {
+        if(nodeActual != NULL) {
+			shuffled.push(nodeActual->data);
+        	nodeActual = nodeActual->next;
+        }
+        if(nodeSecond != NULL) {
+			shuffled.push(nodeSecond->data);
+        	nodeSecond = nodeSecond->next;
+        }
+    }
+    head = shuffled.head;
+}
+
+ElementType List::getMiddle() const {
+    Node* nodeActual = head;
+    Node* nodeSecond = head;
+    int counter = 0;
+    while (nodeActual != NULL) {
+        nodeActual = nodeActual->next;
+        if(counter % 2 != 0)nodeSecond = nodeSecond->next;
+        counter++;
+    }
+    return nodeSecond->data;
+}
+
+ElementType List::getElementFromBack(const int& pos) const {
+    Node* nodeActual = head;
+    Node* nodeSecond = head;
+    int counter = 0;
+    while (pos != counter) {
+        nodeActual = nodeActual->next;
+        counter++;
+    }
+    while (nodeActual != NULL) {
+        nodeActual = nodeActual->next;
+        nodeSecond = nodeSecond->next;
+    }
+    return nodeSecond->data;
+}

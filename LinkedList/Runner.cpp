@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     list.shift();
     list.shift();
     cout<< list <<endl;
-    list.push(3);
+    list.push(8);
     cout<<list<<endl;
     list.insert(0,4);
     list.insert(2,1);
@@ -36,12 +36,17 @@ int main(int argc, char* argv[]) {
     cout<<list.count()<<endl;
     list.reverse();
     cout<<list<<endl;
-    list.push(3);
+    list.push(7);
     cout<<list<<endl;
     list.insert(0,4);
-    list.insert(2,1);
     list.push(5);
+    list.push(9);
     cout<<list<<endl;
     cout<<list.getElement(2)<<endl;
+    //list.shuffle(list);
+    //list.shuffle(list);
+    cout<<list<<endl;
+    cout<<list.getMiddle()<<endl;
+    cout<<list.getElementFromBack(4)<<endl;
     return 0;
 }

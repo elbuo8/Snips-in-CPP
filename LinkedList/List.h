@@ -38,8 +38,11 @@ public:
     ElementType pop();
     int count() const;
     void reverse();
-    ElementType shuffle(const List& list);
+    void shuffle(const List& list);
 	ElementType getElement(const int& pos) const;
+    ElementType getMiddle() const;
+    ElementType getElementFromBack(const int& pos) const;
+    
     friend ostream& operator<<(ostream& os, const List& list);
     
 private:
