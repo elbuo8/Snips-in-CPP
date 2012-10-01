@@ -48,5 +48,7 @@ int main(int argc, char* argv[]) {
     cout<<list<<endl;
     cout<<list.getMiddle()<<endl;
     cout<<list.getElementFromBack(4)<<endl;
+    list.removeOdds();
+    cout<<list<<endl;
     return 0;
 }

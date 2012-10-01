@@ -42,6 +42,7 @@ public:
 	ElementType getElement(const int& pos) const;
     ElementType getMiddle() const;
     ElementType getElementFromBack(const int& pos) const;
+    bool removeOdds();
     
     friend ostream& operator<<(ostream& os, const List& list);
     

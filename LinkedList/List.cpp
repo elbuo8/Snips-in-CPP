@@ -178,3 +178,19 @@ ElementType List::getElementFromBack(const int& pos) const {
     }
     return nodeSecond->data;
 }
+
+bool List::removeOdds() {
+    Node* nodeActual = head;
+    int counter = 0;
+    while (nodeActual != NULL) {
+        if(nodeActual->data % 2 != 0) {
+            nodeActual = nodeActual->next;
+            remove(counter);
+        }
+        else {
+            nodeActual = nodeActual->next;
+            counter++;
+        }
+    }
+    return true;
+}
